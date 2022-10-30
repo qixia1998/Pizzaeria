@@ -26,3 +26,6 @@ class Pizzeria(models.Model):
     )
     email = models.EmailField(max_length=245, blank=True)
     active = models.BooleanField(default=True)
+
+    def __str__(self) -> str:
+        return "{}, {}".format(self.pizzeria_name, self.city)
